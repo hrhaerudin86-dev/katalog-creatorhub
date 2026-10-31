@@ -1,80 +1,86 @@
-# Katalog UMKM + Order WhatsApp
+# KreatorFlow — Performance Creator Marketplace
 
-Template workshop vibe coding Creative Hub App Talent (CHAT) 2026. Repo ini berisi tampilan aplikasi katalog UMKM; tugasmu merangkainya menjadi sistem utuh dengan bantuan AI: database, login admin, keamanan, dan pemesanan lewat WhatsApp.
+KreatorFlow adalah prototype platform Performance Creator Marketplace yang menghubungkan brand dengan content creator untuk menjalankan kampanye endorsement berbasis performa.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fandixurniawan%2Fkatalog-umkm&project-name=katalog-umkm&repository-name=katalog-umkm)
+Platform ini dirancang untuk membantu brand mengelola kampanye, creator menemukan peluang kerja sama, serta admin melakukan validasi konten dan reward.
 
-## Langkah awal
+## Informasi Aplikasi
 
-1. **Salin repo ke akun GitHub-mu.** Klik tombol **Deploy with Vercel** di atas. Vercel akan membuat repo baru di akun GitHub-mu dan langsung men-deploy-nya. Setelah selesai, buka link Vercel-mu: katalog tampil dengan data contoh.
-2. **Buat proyek Supabase.** Masuk ke [supabase.com](https://supabase.com) dengan akun GitHub, lalu buat proyek baru. Simpan password database di tempat aman.
-3. **Siapkan database.** Di Supabase, buka **SQL Editor**, tempel seluruh isi `docs/schema.sql`, lalu klik **Run**. Tabel `produk` beserta data awal akan terbentuk.
-4. **Siapkan akun admin.** Ikuti panduan akun admin yang dibagikan mentor. Setelah itu matikan pendaftaran akun baru di **Authentication > Sign In / Providers**.
-5. **Isi environment variable di Vercel.** Buka proyekmu di Vercel > **Settings > Environment Variables**, lalu isi tiga variabel dari `.env.example`. Nilainya ada di Supabase > **Project Settings > API**. Setelah itu lakukan **Redeploy**.
-6. **Clone repo ke laptop.**
+- **Nama aplikasi:** KreatorFlow
+- **Tagline:** Performance Creator Marketplace
+- **Jenis aplikasi:** Web Application
+- **Repository:** https://github.com/hrhaerudin86-dev/katalog-creatorhub
+- **Link aplikasi:** https://katalog-creatorhub.vercel.app
 
-   ```bash
-   git clone https://github.com/<akunmu>/<nama-repo>.git
-   cd <nama-repo>
-   npm install
-   ```
+## Fitur dan Peran Pengguna
 
-7. **Buat file `.env.local`.** Salin `.env.example` menjadi `.env.local`, lalu isi dengan nilai yang sama seperti di Vercel.
-8. **Jalankan di laptop.**
+### 1. Brand
+- Dashboard performa kampanye.
+- Ringkasan views dan CTA clicks.
+- Informasi anggaran kampanye.
+- Menu kampanye, creator, analitik, dan pembayaran.
 
-   ```bash
-   npm run dev
-   ```
+### 2. Creator
+- Menemukan kampanye.
+- Melihat kampanye yang diikuti.
+- Memantau estimasi penghasilan.
 
-   Buka `http://localhost:3000`.
+### 3. Admin
+- Validasi konten creator.
+- Pemeriksaan anomali traffic.
+- Persetujuan reward.
 
-## Alur kerja
+### 4. Panduan
+- Penjelasan peran pengguna.
+- Alur bisnis platform.
+- Informasi pelacakan CTA.
+- Struktur data dan roadmap.
 
-Kerjakan satu user story setiap kali, lalu simpan dan kirim perubahan:
+## Teknologi
+
+- Next.js
+- React
+- JavaScript
+- Supabase
+- PostgreSQL
+- Vercel
+- GitHub
+
+## Menjalankan Aplikasi Secara Lokal
+
+Pastikan Node.js sudah terpasang.
 
 ```bash
-git add .
-git commit -m "US-01: katalog dari database"
-git push
+npm install
+npm run dev
 ```
 
-Setiap `git push`, Vercel otomatis men-deploy versi terbaru. Cek hasilnya di link Vercel-mu.
+Buka aplikasi melalui:
 
-Urutan yang disarankan: US-01, US-02, US-03, US-04, US-05, US-06, lalu fitur bonus. Daftar lengkap ada di `docs/user-stories.md`.
+```text
+http://localhost:3000
+```
 
-## Isi repo
+## Status Pengembangan
 
-| File atau folder | Isi |
-| --- | --- |
-| `AGENTS.md` | Aturan untuk AI agent, dibaca sebelum setiap prompt |
-| `DESIGN.md` | Panduan warna, huruf, dan komponen |
-| `PROMPTS.md` | Jurnal prompt, wajib diisi |
-| `docs/` | Problem statement, PRD, user story, rancangan teknis, skema database, checklist |
-| `lib/toko.js` | Nama toko, nomor WhatsApp, alamat, jam buka |
-| `app/` | Halaman aplikasi |
-| `components/` | Komponen tampilan |
+KreatorFlow saat ini merupakan prototype tahap awal dengan tampilan dashboard dan navigasi untuk tiga peran pengguna.
 
-## Menyesuaikan dengan usahamu
+**Catatan:** Data performa yang ditampilkan masih berupa data DEMO. Integrasi database, autentikasi pengguna, tracking CTA aktual, validasi performa, dan proses pembayaran belum sepenuhnya diimplementasikan.
 
-- Identitas toko: ubah `lib/toko.js`.
-- Warna: ubah bagian `@theme` di `app/globals.css` (lihat `DESIGN.md`).
-- Produk: ubah langsung di Supabase > **Table Editor > produk**.
+File skema database KreatorFlow tersedia di:
 
-## Aturan penting
+```text
+docs/schema-kreatorflow.sql
+```
 
-- Jangan menyimpan kunci atau password di kode, dan jangan push file `.env.local`.
-- Jangan memberi awalan `NEXT_PUBLIC_` pada environment variable.
-- Isi `PROMPTS.md` setiap menyelesaikan fitur.
+Skema tersebut masih dalam tahap pemeriksaan dan belum diterapkan ke database Supabase.
 
-## Sebelum mengumpulkan
+## Pembuat
 
-1. Jalankan semua poin di `docs/checklist-keamanan.md` dan `docs/checklist-pengujian.md` pada link Vercel.
-2. Lengkapi bagian di bawah ini.
-3. Push perubahan terakhir sebelum batas waktu.
+- **Nama pembuat:** [Isi nama lengkap]
+- **Nama aplikasi:** KreatorFlow
+- **Link aplikasi:** https://katalog-creatorhub.vercel.app
 
-## Tentang aplikasi ini
+## Fitur Bonus
 
-- **Nama usaha:**
-- **Pembuat:**
-- **Link aplikasi:**
-- **Fitur bonus yang dikerjakan:**
+Belum ada fitur bonus yang diklaim pada tahap pengembangan ini.
